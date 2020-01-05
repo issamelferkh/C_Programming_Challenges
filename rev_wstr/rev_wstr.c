@@ -15,58 +15,41 @@
 // OK			if argc != 2 => print '\n'
 // Input => Str with spaces at the beginning and end 
 // Output => Str rev with exactly one space
+//
+// if av[1] => just spaces or tabs ?
+// if av[1] => one word
+// fix prob => ./a.out "abc" | cat -e -> abcab$ ?!!!
+// other tests
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void 	ft_putstr(char *str)
-{
+int	ft_putlast(char *str, int len) {
 	int i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
+
+	while (len > 0 && (str[len] == ' ' || str[len] == '\t'))
+		len--;
+	while (i <= len && str[len-i] != ' ' && str[len-i] != '\t')
 		i++;
-	 }
+	write (1,str+len-i+1,i);
+	while (len > 0 && (str[len] == ' ' || str[len] == '\t'))
+		len--;
+	if (i < len)
+		write (1," ",1);
+	return (len-1);
+
 }
 
-char**	ft_split(char *str)
-{
-	int i=0, j=0, k=0;
-	char **tab;
-	
-	while (str[i]) {
-		if (str[i] != ' ') {
-			tab[j][k] = str[i];
-			k++;
-		}
-		else if ((str[i] == ' ') && (str[i+1] != ' ')) {
-			j++;
-		}
-		i++;
-	}
-	return (tab);
-}
+int main(int ac, char **av) {
+	int len = 0;
 
-int main(int ac, char **av)
-{
-	int i=0;
-	char **tab;
-	if (ac != 2)
-	{
-		ft_putchar('\n');
-		return (0);
+	if (ac == 2) {
+		while (av[1][len])
+			len++;
+		len--;
+		while (len)
+			len = ft_putlast(av[1], len);
 	}
-	tab = ft_split(av[1]);
-	while (tab[i]) {
-		ft_putstr(tab[i]);
-		ft_putchar('\n');
-		i++;
-	}
-	ft_putstr(av[1]);
-	ft_putchar('\n');
+	write (1,"\n",1);
 	return (0);
 }
