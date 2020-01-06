@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_first_param.c                                  :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: angavrel <angavrel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: iel-ferk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/12/03 15:00:02 by angavrel          #+#    #+#             */
-/*   Updated: 2017/07/14 12:25:39 by fwuensch         ###   ########.fr       */
+/*   Created: 2020/01/06 19:35:53 by iel-ferk          #+#    #+#             */
+/*   Updated: 2020/01/06 19:55:28 by iel-ferk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+char    *ft_strrev(char *str) {
+	int i = 0, j = 0;
+	char c;
 
-int		main(int ac, char **av)
-{
-	if (ac > 1)
-		while (*av[1])
-			write(1, av[1]++, 1);
-	write(1, "\n", 1);
-	return (0);
+	while (str[i])
+		i++;
+	i--;
+	while (str[j] && j<=i) {
+		c = str[i];
+		str[i] = str[j];
+		str[j] = c;
+		i--;
+		j++;
+	}
+	return (str);
 }
