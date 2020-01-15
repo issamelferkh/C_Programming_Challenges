@@ -38,3 +38,22 @@ Success$
 $> ./chessmate | cat -e
 $
 $>
+
+* Algo
+========
+King.
+
+Pawn    (P):OK
+Bishop  (B):
+Rook    (R):OK
+Queen   (Q):
+
+
+
+!!! valid input
+!!! ft_piece
+
+R   .   .   .
+.   /   /   /   
+.   /   /   /
+.   /   /   /
