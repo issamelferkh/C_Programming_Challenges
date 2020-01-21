@@ -2,7 +2,11 @@ Assignment name  : rpn_calc
 Expected files   : *.c, *.h 
 Allowed functions: atoi, printf, write, malloc, free
 --------------------------------------------------------------------------------
-
+* Program takes a string and prints the result on the standard output followed by a newline. 
+* You must implement the following operators : "+", "-", "*", "/", and "%".
+* If the string isn't valid -> print "Error" on the standard output followed by a newline.
+OK * If there isn't exactly one argument -> print "Error" on the standard output followed by a newline.
+--------------------------------------------------------------------------------
 Write a program that takes a string which contains an equation written in
 Reverse Polish notation (RPN) as its first argument, evaluates the equation, and
 prints the result on the standard output followed by a newline. 
