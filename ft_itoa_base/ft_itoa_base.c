@@ -34,7 +34,6 @@ char	*ft_itoa_base(int value, int base) {
     } else if (value < 0){
         value = -value;
     }
-     
 
     while (value > 0) {
         tmp = value % base;
@@ -48,6 +47,7 @@ char	*ft_itoa_base(int value, int base) {
         str[j] = '-';
         j++;
     }
+
     while (str[i] && j < i) {
         c = str[i];
         str[i] = str[j];
