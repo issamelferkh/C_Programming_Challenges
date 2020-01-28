@@ -10,22 +10,19 @@
 - [x] moment	
 - [x] rev_wstr	
 - [x] rostring	
+- [x] ft_atoi_base          
+- [x] ft_itoa_base
 
 ## To do for Exam
 ### -> Mar 28/01/2020
-- [ ] ft_atoi_base          
-- [ ] ft_itoa_base
 - [ ] brainfuck            
-### -> Mer 29/01/2020
 - [ ] check_mate            
 - [ ] brackets 
-### -> Jeu 30/01/2020
 - [ ] flood_fill            
 - [ ] options  
-### -> Ven 31/01/2020
+### -> Sam 01/02/2020
 - [ ] v_Beta_rpn_calc       
 - [ ] v_Beta_biggest_pal 
-### -> Sam 01/02/2020
 - [ ] v_Beta_print_memory   
 ### One Exo peer Day
 - [ ] v_Beta_infin_add
