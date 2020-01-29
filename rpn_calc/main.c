@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iel-ferk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/08 17:03:57 by iel-ferk          #+#    #+#             */
-/*   Updated: 2020/01/08 17:03:58 by iel-ferk         ###   ########.fr       */
+/*   Created: 2020/01/19 11:50:10 by iel-ferk          #+#    #+#             */
+/*   Updated: 2020/01/19 11:50:11 by iel-ferk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h> // for test
+#include "ft_rpn_calc.h"
 
 int     ft_isspace(char c) {
     return (c == ' ' || c == '\t');
@@ -71,10 +70,60 @@ char    **ft_split(char *str) {
     return (tab);
 }
 
-int main (int ac, char **av) { //for test
-    char   **tab;
+int	ft_isop(char *c)
+{
+	return (c[0] == '+' || c[0] == '-' || c[0] == '*' || c[0] == '/' || c[0] == '%');
+}
 
-    tab = ft_split(av[1]);
-    printf("%s\n",tab[0]);
+int	ft_isnbr(char *str)
+{
+    int i = 0;
+    while (str[i]) {
+        if (str[i] < '0' || str[i] > '9')
+            return (0);
+        i++;
+    }
+    return (1);
+}
+
+void ft_rpn_calc(char *str) {
+    int nbr[1024], i = 0, j = 0, x = 0;
+    char **rpn;
+
+    rpn = ft_split(str);
+    while (rpn[i]) {
+        if (ft_isnbr(rpn[i])) {
+            nbr[j] = atoi(rpn[i]);
+            j++;
+        } else if (ft_isop(rpn[i])) {
+            if (j > 1) {
+                rpn[i][0] == '+' ? x = nbr[j-2] + nbr[j-1] : 0;
+                rpn[i][0] == '-' ? x = nbr[j-2] - nbr[j-1] : 0;
+                rpn[i][0] == '*' ? x = nbr[j-2] * nbr[j-1] : 0;
+                rpn[i][0] == '/' ? x = nbr[j-2] / nbr[j-1] : 0;
+                rpn[i][0] == '%' ? x = nbr[j-2] % nbr[j-1] : 0;
+                j = j-2;
+                nbr[j] = x;
+                j++;
+            } else {
+                printf("Error\n");
+                return ;
+            }
+        }
+        i++;
+    }
+    if (!rpn[i] && j != 1) {
+        printf("Error\n");
+    } else {
+        printf("%d\n",x);
+    }
+}
+
+int main (int ac, char **av) {
+    if (ac == 2) {
+        ft_rpn_calc(av[1]);
+    } else {
+        printf("Error\n");
+    }
     return (0);
 }
