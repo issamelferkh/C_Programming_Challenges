@@ -96,6 +96,8 @@ void ft_rpn_calc(char *str) {
             nbr[j] = atoi(rpn[i]);
             j++;
         } else if (ft_isop(rpn[i])) {
+            printf("nbr[%d - 1] = %d",j,nbr[j -1]);
+            printf("nbr[%d - 2] = %d",j,nbr[j -2]);    
             if (j > 1) {
                 rpn[i][0] == '+' ? x = nbr[j-2] + nbr[j-1] : 0;
                 rpn[i][0] == '-' ? x = nbr[j-2] - nbr[j-1] : 0;

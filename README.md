@@ -13,20 +13,16 @@
 - [x] ft_atoi_base          
 - [x] brainfuck  
 - [x] v_Beta_rpn_calc 
+- [x] flood_fill
 
 ## To do for Exam
-### -> Jeu 30/01/2020
-- [ ] ft_itoa_base
-- [ ] flood_fill
-
 ### -> Ven 31/01/2020
+- [ ] ft_itoa_base
 - [ ] options 
 - [ ] brackets             
 - [ ] check_mate
-
-### -> Sam 01/02/2020      
 - [ ] v_Beta_biggest_pal 
-- [ ] v_Beta_print_memory   
+- [ ] v_Beta_print_memory  
 
 ### One Exo peer Day
 - [ ] v_Beta_infin_add
