@@ -4,29 +4,32 @@
 - [x] ft_putnbr	
 - [x] ft_atoi	
 - [x] ft_itoa		
-- [x] ft_split	
-- [x] sort_int_tab	
-- [x] fprime	
+- [x] ft_atoi_base 
 - [x] moment	
-- [x] rev_wstr	
-- [x] rostring	
-- [x] ft_atoi_base          
-- [x] brainfuck  
-- [x] v_Beta_rpn_calc 
-- [x] flood_fill
 
 ## To do for Exam
-### -> Ven 31/01/2020
-- [ ] ft_itoa_base
+### -> Before exam
+##### 12 min peer exo
+##### 180 min / 14 exos
+##### 09 -> 12
+- [ ] sort_int_tab	
+- [ ] fprime	
+- [ ] rev_wstr	
+- [ ] rostring	
+- [ ] ft_split	
+- [ ] brainfuck 
 - [ ] options 
-- [ ] brackets             
+- [ ] brackets  
+- [ ] rpn_calc 
+- [ ] flood_fill
+- [ ] ft_itoa_base  
 - [ ] check_mate
-- [ ] v_Beta_biggest_pal 
-- [ ] v_Beta_print_memory  
+- [ ] biggest_pal 
+- [ ] print_memory  
 
-### One Exo peer Day
-- [ ] v_Beta_infin_add
-- [ ] v_Beta_infin_mult
+### After exam - One Exo peer Day
+- [ ] v_alpha_infin_add
+- [ ] v_alpha_infin_mult
 - [ ] v_alpha_F-Password
 - [ ] v_alpha_count_island
 - [ ] v_alpha_g_diam

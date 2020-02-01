@@ -60,6 +60,6 @@ char	*ft_itoa_base(int value, int base) {
 
 int main(int ac, char **av) // for test 
 {
-    printf("=>%s\n",ft_itoa_base(-271254,16));
+    printf("=>%s\n",ft_itoa_base(-271254,10));
     return (0);
 }

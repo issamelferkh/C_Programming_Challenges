@@ -66,6 +66,6 @@ char	*ft_itoa_base(int value, int base) {
 }
 
 int main () { // for test
-    printf("ft_itoa_base => %s\n",ft_itoa_base(-255,10));
+    printf("ft_itoa_base => %s\n",ft_itoa_base(-271254,16));
     return (0);
 }
