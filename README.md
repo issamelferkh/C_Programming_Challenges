@@ -17,9 +17,11 @@
 - [x] rpn_calc 
 - [x] flood_fill
 - [x] ft_itoa_base  
-- [x] check_mate
 
 ## To-do
+* Add check_mate V2
+
+- [ ] check_mate
 - [ ] print_memory  
 - [ ] biggest_pal 
 - [ ] infin_add
