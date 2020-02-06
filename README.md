@@ -20,11 +20,14 @@
 
 ## To-do
 * Add check_mate V2
-
+* Add trace tests +++ -> timeout biggest_pal !!!
+* Add exo "first non repetin char"
+* Add interview challenges from (google, facebook, amazone ...)
 - [ ] check_mate
 - [ ] print_memory  
 - [ ] biggest_pal 
 - [ ] infin_add
+
 - [ ] infin_mult
 - [ ] F-Password
 - [ ] count_island
