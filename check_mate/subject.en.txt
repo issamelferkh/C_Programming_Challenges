@@ -3,8 +3,7 @@ Expected files   : *.c, *.h
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
 
-Write a program who takes rows of a chessboard in argument and check if your 
-King is in a check position.
+OK: Write a program who takes rows of a chessboard in argument and check if your King is in a check position.
 
 Chess is played on a chessboard, a squared board of 8-squares length with 
 specific pieces on it : King, Queen, Bishop, Knight, Rook and Pawns.
@@ -25,7 +24,7 @@ The King is considered as in a check position when an other enemy piece can
 capture it. When it's the case, you will print "Success" on the standard output
 followed by a newline, otherwise you will print "Fail" followed by a newline.
 
-If there is no arguments, the program will only print a newline.
+OK: If there is no arguments, the program will only print a newline.
 
 Examples:
 
@@ -38,3 +37,6 @@ Success$
 $> ./chessmate | cat -e
 $
 $>
+
+
+King, Queen, Bishop, Knight, Rook and Pawns.
