@@ -28,3 +28,7 @@ $> biggest_pal abeb qpinqwjobo qkmnwoiq
 $> biggest_pal
 
 $>
+
+====================================================================
+./a.out   +526.08s user 0.70s system 99% cpu 8:50.89 total  => after optimize -> timeout !
+./a.out   1.64s user 0.02s system 99% cpu 1.667 total       => before optimize

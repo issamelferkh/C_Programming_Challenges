@@ -17,17 +17,15 @@
 - [x] rpn_calc 
 - [x] flood_fill
 - [x] ft_itoa_base  
+- [x] check_mate
+- [x] biggest_pal 
 
 ## To-do
-* Add check_mate V2
-* Add trace tests +++ -> timeout biggest_pal !!!
+* Add trace tests for each challenge
+- [ ] print_memory  
+- [ ] infin_add
 * Add exo "first non repetin char"
 * Add interview challenges from (google, facebook, amazone ...)
-- [ ] check_mate
-- [ ] print_memory  
-- [ ] biggest_pal 
-- [ ] infin_add
-
 - [ ] infin_mult
 - [ ] F-Password
 - [ ] count_island
