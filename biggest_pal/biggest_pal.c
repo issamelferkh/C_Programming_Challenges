@@ -36,6 +36,7 @@ int     ft_same(char *str) { // check if all chars of the str is the same.
     }
     return (1);
 }
+
 void    ft_pal(char *str) {
     int j = 0, i = 0, max = 0, len = 0, start = 0;
 
